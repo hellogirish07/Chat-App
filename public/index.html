@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink WhatsaApp</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Font awousem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    
+    <!-- My Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="">
+        <h1>Welcome to Pink WhatsaApp</h1>
+
+        <select id="theme-selector">
+            <option value="default">Default</option>
+            <option value="pastelBlue">Pastel Blue</option>
+            <option value="mintGreen">Mint Green</option>
+            <option value="lavender">Lavender</option>
+        </select>
+
+    </header>
+
+    <div id="overlay">
+        <div id="name-prompt">
+            <h2 class="pink"> Enter your name to join the chat</h2>
+            <input type="text" id="username-input" placeholder="Your name" required />
+            <button id="join-chat">Enter <i class="fa-solid fa-right-to-bracket"></i></button>
+        </div>
+    </div>
+
+    <div id="chat-container">
+        <ul id="messages"></ul>
+        <form id="chat-form" autocomplete="off">
+            <input id="message-input" type="text" placeholder="Type your message..." required>
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js" type="module"></script>
+    <script src="theme.js" type="module"></script>
+</body>
+
+</html>
