@@ -167,3 +167,11 @@ button i {
     cursor: pointer;
     font-size: 25px;
 }
+
+@media (max-width : 650px) {
+    body {
+        height: 90vh;
+    } 
+
+    
+}
