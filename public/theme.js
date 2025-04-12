@@ -7,16 +7,9 @@ export const themes = {
         dropdownBackground: "#f1f1f1",
         dropdownTextColor: "#000",
         dropdownBorder: "1px solid #000",
+        sendButton : "rgba(252, 70, 107, 1)",
     },
-    // cutePink: {
-    //     bodyBackground: "linear-gradient(45deg, #ff9a9e 0%, #fad0c4 100%)",
-    //     containerBackground: "rgba(255, 255, 255, 0.8)",
-    //     sentMessageBackground: "#f48fb1",
-    //     receivedMessageBackground: "#ffeef3",
-    //     dropdownBackground: "#f8bbd0",
-    //     dropdownTextColor: "#4a154b",
-    //     dropdownBorder: "1px solid #ec407a",
-    // },
+
     pastelBlue: {
         bodyBackground: "linear-gradient(45deg, #a1c4fd 0%, #c2e9fb 100%)",
         // containerBackground: "rgba(255, 255, 255, 0.9)",
@@ -26,7 +19,9 @@ export const themes = {
         dropdownBackground: "#bbdefb",
         dropdownTextColor: "#0d47a1",
         dropdownBorder: "1px solid #42a5f5",
+        sendButton : "#90caf9",
     },
+
     mintGreen: {
         bodyBackground: "linear-gradient(45deg, #d4fc79 0%, #96e6a1 100%)",
         // containerBackground: "rgba(255, 255, 255, 0.8)",
@@ -36,7 +31,9 @@ export const themes = {
         dropdownBackground: "#c8e6c9",
         dropdownTextColor: "#1b5e20",
         dropdownBorder: "1px solid #66bb6a",
+        sendButton : "#81c784",
     },
+
     lavender: {
         bodyBackground: "linear-gradient(45deg, #e0c3fc 0%, #8ec5fc 100%)",
         // containerBackground: "rgba(255, 255, 255, 0.9)",
@@ -46,6 +43,7 @@ export const themes = {
         dropdownBackground: "#d1c4e9",
         dropdownTextColor: "#4a148c",
         dropdownBorder: "1px solid #7e57c2",
+        sendButton : "#b39ddb",
     },
 };
 
@@ -64,7 +62,7 @@ export function applyTheme(themeName) {
         dropdown.style.border = theme.dropdownBorder;
     }
 
-    // Styling sent and received messages (optional, you already have this)
+    // Styling sent and received messages 
     const sentMessages = document.querySelectorAll("#messages li.sent");
     sentMessages.forEach((msg) => {
         msg.style.background = theme.sentMessageBackground;
@@ -73,5 +71,10 @@ export function applyTheme(themeName) {
     const receivedMessages = document.querySelectorAll("#messages li.received");
     receivedMessages.forEach((msg) => {
         msg.style.background = theme.receivedMessageBackground;
+    });
+
+    const sendButton = document.querySelectorAll('button');
+    sendButton.forEach(button => {
+        button.style.background = theme.sendButton;
     });
 }
